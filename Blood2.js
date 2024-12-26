@@ -1,7 +1,6 @@
 
 
 const form = document.getElementById('blood-donation-form');
-const errorMessage = document.getElementById('error-message');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -19,32 +18,31 @@ form.addEventListener('submit', (e) => {
 
   // Eligibility conditions
   if (age < 18 || age > 65) {
-    errorMessage.textContent = 'You must be between 18 and 65 years old to donate blood.';
-    return;
+    alert("You must be between 18 and 65 years old to donate blood.");
+    return false;
   }
 
   if (weight < 45) {
-    errorMessage.textContent = 'You must weigh at least 45 kg to donate blood.';
-    return;
+    alert("You must weigh at least 45 kg to donate blood.");
+    return false;
   }
 
   if (alcoholic === 'yes') {
-    errorMessage.textContent = 'You are not eligible to donate blood if you are an alcoholic.';
-    return;
+    alert("You are not eligible to donate blood if you are an alcoholic.");
+    return false;
   }
 
   if (medicalConditions === 'yes') {
-    errorMessage.textContent = 'You are not eligible to donate blood if you have medical conditions.';
-    return ;
+    alert("You are not eligible to donate blood if you have medical conditions.");
+    return false;
   }
 
   if (smoker === 'yes') {
-    errorMessage.textContent = 'You are not eligible to donate blood if you are a smoker.';
+    alert("You are not eligible to donate blood if you are a smoker.");
     return false;
   }
-  return true;
 
   // If all conditions are met, display success message
-  document.write(alert('Thank you for registering to donate blood!'));
+  alert('Thank you for registering to donate blood!');
   form.reset();
 })
