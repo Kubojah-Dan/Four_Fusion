@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation</title>
+  <link rel="stylesheet" href="Blood2.css">
+</head>
+<body>
+  <div class="fullContainer banner" id="homeSection">
+<header>
+    <div class="container">
+    <div class="logo">
+        <img src="WhatsApp Image 2024-12-26 at 21.42.50.jpeg" alt="Four fusion"/>
+        
+    </div>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#homeSection">Home</a>
+            </li>
+            <li>
+                <a href="#aboutSection">About Us</a>
+            </li>
+            <li>
+                <a href="#educationSection">Education</a>
+            </li>
+            <li>
+                <a href="#formSection">Registration</a>
+            </li>
+            
+        </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+    <h1>Together We Can <span>Save Lives</span></h1>
+    <p>
+        "Donate blood, save lives! Every drop you give can make a life-changing difference to someone in need. It’s a simple act of kindness that takes just a little time but has an enormous impact. Be a hero today—donate blood and help build a healthier, stronger community!"
+
+    </p>
+    <button>Start With A Little</button>
+</div>
+</div>
+<!--End of home section-->
+
+<section class="fullContainer" id="aboutSection">
+    <div class="container">
+        <h2 class="sectionTitle">About Us</h2>
+        <p>
+            Welcome to Donate Pulse, a platform dedicated to saving lives through the power of blood donation. Established with the vision of creating a community-driven approach to healthcare, we strive to bridge the gap between donors and those in need.
+        </p>
+        <div class="cards">
+            <div class="donationBox">
+               <div class="title">OUR MISSION</div> 
+               <p>
+                To inspire, educate, and empower individuals to donate blood, fostering a culture of compassion and responsibility that brings communities closer together.
+               </p>
+              
+            </div>
+            <!--End of donation box-->
+
+            <div class="volunteerBox">
+                <div class="title">OUR VISION</div> 
+                <p>
+                    A world where blood is always available when and where it is needed, ensuring health equity and saving countless lives.
+                </p>
+             </div>
+             <!--End of volunteer box-->
+
+             <div class="scholarshipBox">
+               <div class="title">What we do</div> 
+               <p>
+                Using our network, we link eligible donors with patients in need.
+                We educate communities on the importance of blood donation and debunk myths surrounding it.
+               </p>
+        
+            </div>
+        </div>
+    </div>
+</section>
+<!--End of About section-->
+
+<!--Start of education section-->
+
+<section class="education" id="educationSection">
+
+    <video autoplay muted loop class="videoPlayer">
+        <source src="49815-458438877_small.mp4" type="video/mp4"/>
+        your browser does not support HTML5 video
+    </video>
+
+    <div class="container">
+        <div class="sectionTitle">Education</div>
+
+       <div class="educationContainer">
+           <h3>
+            Facts About Blood and Blood Types<br/>
+            <strong>NOT ALL BLOOD IS ALIKE</strong>
+           </h3>
+           <P>
+            Blood types are determined by the presence or absence of certain antigens-substances that can trigger an immune response if they are foreign to the body.
+            Since some antigens can trigger a patient's immune system to attack the transfused blood, safe blood transfusions depend on careful blood typing and cross
+            -matching. After donating blood, the body works to replenish the blood loss. This stimulates the production of new blood cells and in turn, help in maintaining good health.
+            </body>
+                
+            </body>
+       </div>
+
+    </div>
+</section>
+<!--End of education section-->
+
+<!--Start of form Section-->
+<section class="form" id="formSection" method="post">
+    <div class="container">
+        <div class="sectionTitle">Registration</div>
+        <div class="formContainer">
+            <form id="blood-donation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+        
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="65" required>
+        
+                <label for="blood-group">Blood Group:</label>
+                <select id="blood-group" name="blood-group" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+        
+                <label for="weight">Weight (in kg):</label>
+                <input type="number" id="weight" name="weight" min="45" max="100" required>
+        
+                <label for="alcoholic">Are you an alcoholic?</label>
+                <div>
+                    <input type="radio" id="yes" name="alcoholic" value="yes" required>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="alcoholic" value="no" required>
+                    <label for="no">No</label>
+                </div>
+        
+                <label for="medical-conditions">Do you have any medical conditions?</label>
+                <div>
+                    <input type="radio" id="yes-medical" name="medical-conditions" value="yes" required>
+                    <label for="yes-medical">Yes</label>
+                    <input type="radio" id="no-medical" name="medical-conditions" value="no" required>
+                    <label for="no-medical">No</label>
+                </div>
+        
+                <label for="donation-history">Have you donated blood before?</label>
+                <div>
+                    <input type="radio" id="yes-donation" name="donation-history" value="yes" required>
+                    <label for="yes-donation">Yes</label>
+                    <input type="radio" id="no-donation" name="donation-history" value="no" required>
+                    <label for="no-donation">No</label>
+                </div>
+        
+                <button type="submit">Submit</button>
+                <div id="error-message"></div>
+            </form>
+</div>
+</div>
+</section>
+
+  <script src="Blood2.js"></script>
+</body>
+</html>
