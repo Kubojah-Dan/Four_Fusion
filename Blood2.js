@@ -11,38 +11,36 @@ form.addEventListener('submit', (e) => {
   const age = document.getElementById('age').value;
   const bloodGroup = document.getElementById('blood-group').value;
   const weight = document.getElementById('weight').value;
-  const alcoholic = document.querySelector('input[name="alcoholic"]:checked').value;
-  const medicalConditions = document.querySelector('input[name="medical-conditions"]:checked').value;
-  const donationHistory = document.querySelector('input[name="donation-history"]:checked').value;
-  const smoker = document.querySelector('input[name="smoker"]:checked').value;
+  const alcoholic = document.querySelector('input[name="alcoholic"]:checked');
+  const medicalConditions = document.querySelector('input[name="medical-conditions"]:checked');
+  const donationHistory = document.querySelector('input[name="donation-history"]:checked');
 
   // Eligibility conditions
   if (age < 18 || age > 65) {
     alert("You must be between 18 and 65 years old to donate blood.");
-    return false;
+    return;
   }
 
   if (weight < 45) {
     alert("You must weigh at least 45 kg to donate blood.");
-    return false;
+    return;
   }
 
   if (alcoholic === 'Yes') {
     alert("You are not eligible to donate blood if you are an alcoholic.");
-    return false;
+    return;
   }
-
+ 
   if (medicalConditions === 'Yes') {
     alert("You are not eligible to donate blood if you have medical conditions.");
-    return false;
+   return;
   }
 
-  if (smoker === 'Yes') {
-    alert("You are not eligible to donate blood if you are a smoker.");
-    return false;
+  if (donationHistory === 'Yes') {
+    alert("You are eligible to donate");
   }
 
   // If all conditions are met, display success message
-  alert('Thank you for registering to donate blood!');
+  alert("Thank you for registering to donate blood!")
   form.reset();
-})
+});
