@@ -27,17 +27,17 @@ form.addEventListener('submit', (e) => {
     return false;
   }
 
-  if (alcoholic === 'yes') {
+  if (alcoholic === 'Yes') {
     alert("You are not eligible to donate blood if you are an alcoholic.");
     return false;
   }
 
-  if (medicalConditions === 'yes') {
+  if (medicalConditions === 'Yes') {
     alert("You are not eligible to donate blood if you have medical conditions.");
     return false;
   }
 
-  if (smoker === 'yes') {
+  if (smoker === 'Yes') {
     alert("You are not eligible to donate blood if you are a smoker.");
     return false;
   }
